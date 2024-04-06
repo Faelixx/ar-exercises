@@ -6,4 +6,6 @@ puts "----------"
 
 # Your code goes here ...
 
-puts "The amount of store entries is: #{Store.all.count}"
+@store1 = Store.find_by(id: 1)
+@store2 = Store.find_by(id: 2)
+@store1.update(name: "Or something ( ͡° ͜ʖ ͡°)")
