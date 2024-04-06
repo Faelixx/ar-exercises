@@ -10,7 +10,12 @@ puts "----------"
 
 class Store < ActiveRecord::Base
   self.table_name = "stores"
-  # has_many :stores
+  has_many :employees
+end
+
+class Employee < ActiveRecord::Base
+  self.table_name = "employees"
+  belongs_to = :store
 end
 
 store1 = Store.create(name: "Burnaby", annual_revenue: 300000, mens_apparel: true, womens_apparel: true)
